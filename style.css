@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
 body {
     margin: 0;
 }
@@ -64,6 +65,7 @@ body {
     color: black;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
 }
 
 #banner>#menu>nav>ul>li>a {
@@ -76,17 +78,48 @@ body {
 /* section2 */
 #section2,#section4{
     margin: 4em 1.5em 1.5em 1.5em;
-   
+    font-family: 'League Spartan', sans-serif;
 }
 #section2 > h1{
-width:90%;
+width:100%;
+font-weight: 700;
+font-size: 2.3em;
+
 }
+
+#section2 > p{
+   color:hsl(0, 0%, 63%);
+   line-height: 1.5;
+   width:100%;
+   font-size:15px;
+}
+
+#section2 > #arrow{
+    display: flex;
+    align-items: center;
+}
+#section2 > #arrow > p{
+    font-size: 1.5em;
+    letter-spacing: 0.4em;
+}
+
+#section2 > #arrow > img{
+    margin-left: 1.2em;
+}
+
 
 #dark-chair{
     background-image: url(images/dark.jpg);
     
     height: 40vh;
 }
+
+#section4 > p{
+    color:hsl(0, 0%, 63%);
+    line-height: 1.5;
+    width:100%;
+    font-size:15px;
+ }
 
 #light{
     background-image: url(images/light.jpg);
