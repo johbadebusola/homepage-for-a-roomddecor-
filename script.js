@@ -28,7 +28,7 @@ buttons.forEach(button => {
             if (count < 0) {
                 count = images.length - 1
             }
-            banner.style.background = `url('images/${images[count]}.jpg')`
+            banner.style.background = `url('images/${images[count]}.jpg') center/100% 100%`
             // console.log("prev")
         }
         if (button.classList.contains("next")) {
@@ -36,7 +36,7 @@ buttons.forEach(button => {
             if (count > images.length - 1) {
                 count = 0
             }
-            banner.style.background = `url('images/${images[count]}.jpg')`
+            banner.style.background = `url('images/${images[count]}.jpg') center/100% 100%` 
             // console.log("next")
         }
     }

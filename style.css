@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
 body {
     margin: 0;
 }
 
 #banner {
     background-image: url(images/img1.jpg);
-    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 40vh;
     padding: 3em;
     position: relative;
@@ -46,10 +48,10 @@ body {
     transition: ease-in-out 0.5s;
 }
 
-.active{
-    opacity:0;
+.active {
+    opacity: 0;
     visibility: hidden;
-   
+
 }
 
 
@@ -76,53 +78,119 @@ body {
 }
 
 /* section2 */
-#section2,#section4{
+#section2,
+#section4 {
     margin: 4em 1.5em 1.5em 1.5em;
     font-family: 'League Spartan', sans-serif;
 }
-#section2 > h1{
-width:100%;
-font-weight: 700;
-font-size: 2.3em;
+
+#section2>h1 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 2.3em;
 
 }
 
-#section2 > p{
-   color:hsl(0, 0%, 63%);
-   line-height: 1.5;
-   width:100%;
-   font-size:15px;
+#section2>p {
+    color: hsl(0, 0%, 63%);
+    line-height: 1.5;
+    width: 100%;
+    font-size: 15px;
 }
 
-#section2 > #arrow{
+#section2>#arrow {
     display: flex;
     align-items: center;
 }
-#section2 > #arrow > p{
+
+#section2>#arrow>p {
     font-size: 1.5em;
     letter-spacing: 0.4em;
 }
 
-#section2 > #arrow > img{
+#section2>#arrow>img {
     margin-left: 1.2em;
 }
 
 
-#dark-chair{
+#dark-chair {
     background-image: url(images/dark.jpg);
-    
-    height: 40vh;
+    background-size: 100% 100%;
+  
 }
 
-#section4 > p{
-    color:hsl(0, 0%, 63%);
+#section4>p {
+    color: hsl(0, 0%, 63%);
     line-height: 1.5;
-    width:100%;
-    font-size:15px;
- }
+    width: 100%;
+    font-size: 15px;
+}
 
-#light{
+#light {
     background-image: url(images/light.jpg);
+    background-size: 100% 100%;
+
+
+}
+
+/* desktop view */
+
+@media (min-width:900px) {
+  #container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 0.4;
+        grid-template-areas:
+            'box1 box1 box2'
+            'box3 box4 box5'
+        ;
+    }
+
+    #banner {
+      
+        grid-area: box1;
+      height: 76%;
+     width: 80%;
+      grid-column: 100px;
+    }
+
+    #section2 {
+        margin: 0;
+        grid-area: box2;
+        padding: 2em;
+     
+    }
+
+    #dark-chair {
+        grid-area: box3;
+    }
+
+    #section4 {
+        grid-area: box4;
+      background-color: teal;
+      padding: 2em;
+        margin: 0;
     
-    height: 40vh;
+    }
+    #light{
+        grid-area: box5;
+    }
+    
+    .hamburger{
+        display:none;
+    }
+
+    .active{
+        opacity: 1;
+        visibility: visible;
+       
+    }
+    #cancel{
+        display: none;
+    }
+   #banner > #menu{
+        background-color:transparent;
+        justify-content: end;
+        
+    }
 }
