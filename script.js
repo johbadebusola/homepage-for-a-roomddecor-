@@ -28,7 +28,7 @@ buttons.forEach(button => {
             if (count < 0) {
                 count = images.length - 1
             }
-            banner.style.background = `url('../images/${images[count]}.jpg')`
+            banner.style.background = `url('../images/${images[count]}.JPG')`
             // console.log("prev")
         }
         if (button.classList.contains("next")) {
